@@ -1,27 +1,48 @@
 class SmartCalculator {
+	 
   constructor(initialValue) {
-    // your implementation
+  	this.stringResult = '' + initialValue;
   }
 
   add(number) {
-    // your implementation
+    this.stringResult += '+' + number;
+    SmartCalculator.prototype.valueOf = function(){
+   		return eval(this.stringResult);
+	};
+    return this;
   }
   
   subtract(number) {
-    // your implementation
+    this.stringResult += '-' + number;
+    SmartCalculator.prototype.valueOf = function(){
+   		return eval(this.stringResult);
+	};
+    return this;
   }
 
   multiply(number) {
-    // your implementation
+    this.stringResult += '*' + number;
+    SmartCalculator.prototype.valueOf = function(){
+   		return eval(this.stringResult);
+	};
+    return this;
   }
 
   devide(number) {
-    // your implementation
+    this.stringResult += '/' + number;
+    SmartCalculator.prototype.valueOf = function(){
+   		return eval(this.stringResult);
+	};
+    return this;
   }
 
   pow(number) {
-    // your implementation
-  }
+  	this.stringResult += '**' + number;
+  	SmartCalculator.prototype.valueOf = function(){
+   		return eval(this.stringResult);
+	};
+    return this;
+  } 
 }
 
 module.exports = SmartCalculator;
